@@ -9,7 +9,7 @@ RUN corepack enable pnpm && pnpm i --frozen-lockfile
 # Copy Sources
 COPY src ./src
 RUN npx mastra build
-RUN apk add --no-cache gcompat
+RUN apk add --no-cache gcompat curl
  
 # Default ENV
 ENV PORT=8080
